@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+<BorderPane stylesheets="@styles.css" fx:id="mainLayout" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.patrikduch.school.neuro.perceptron.controllers.HomeController">
+
+    <top>
+        <Label style="-fx-font-size: 17px;" text="Backpropagation" BorderPane.alignment="TOP_CENTER"></Label>
+    </top>
+
+    <left>
+       <VBox>
+           <!-- Labely pro vstup a výstup  -->
+           <HBox>
+               <Label text="Vstup" style="-fx-font-size: 17px;">
+                   <padding>
+                       <Insets left="10"></Insets>
+                   </padding>
+               </Label>
+               <Label text="Výstup" style="-fx-font-size: 17px;">
+                   <padding>
+                       <Insets left="50"></Insets>
+                   </padding>
+               </Label>
+           </HBox>
+
+           <!--  Tlačitka pro první řádek  -->
+           <HBox>
+               <padding>
+                   <Insets left="10"></Insets>
+               </padding>
+
+               <Button id="firstLineInBtns" text="0" />
+               <Button id="firstLineInBtns" text="0" />
+
+               <HBox>
+                   <padding>
+                       <Insets left="35"></Insets>
+                   </padding>
+
+                   <!-- Výstupní tlačítko pro první řádek  -->
+                   <Button onAction="#onButtonClicked"  fx:id="outputBtnOne" text="0" style="-fx-font-size: 15px;"/>
+               </HBox>
+
+           </HBox>
+
+
+           <!--  Tlačitka pro druhý řádek  -->
+           <HBox>
+               <padding>
+                   <Insets left="10"></Insets>
+               </padding>
+
+               <Button onAction="#onButtonClicked" text="0"/>
+               <Button onAction="#onButtonClicked" text="1"/>
+
+               <HBox>
+                   <padding>
+                       <Insets left="35"></Insets>
+                   </padding>
+                   <!-- Výstupní tlačítko pro druhý řádek  -->
+                   <Button  onAction="#onButtonClicked"  fx:id="outputBtnTwo" text="0" style="-fx-font-size: 15px;"/>
+               </HBox>
+           </HBox>
+
+
+           <!--  Tlačitka pro třetí řádek  -->
+           <HBox>
+               <padding>
+                   <Insets left="10"></Insets>
+               </padding>
+
+               <Button id="thirdLineInBtns" text="1"/>
+               <Button id="thirdLineInBtns" text="0"/>
+
+               <HBox>
+                   <padding>
+                       <Insets left="35"></Insets>
+                   </padding>
+
+                   <!-- Výstupní tlačítko pro třetí řádek  -->
+                   <Button onAction="#onButtonClicked" fx:id="outputBtnThree" text="0"/>
+               </HBox>
+           </HBox>
+
+           <!--  Tlačitka pro čtvrtý řádek  -->
+           <HBox>
+
+               <padding>
+                   <Insets left="10"></Insets>
+               </padding>
+
+               <Button id="fourLineInBtns" text="1" />
+               <Button id="fourLineInBtns" text="1" />
+
+               <HBox>
+                   <padding>
+                       <Insets left="35"></Insets>
+                   </padding>
+                   <!-- Výstupní tlačítko pro čtvrtý řádek  -->
+                   <Button  onAction="#onButtonClicked" fx:id="outputBtnFour" text="0" style="-fx-font-size: 15px;"/>
+               </HBox>
+           </HBox>
+
+           <!--  Tlačitko pro start učení  -->
+           <HBox>
+               <padding>
+                   <Insets right="10" top="10" left="10"></Insets>
+               </padding>
+               <Button text="Start učení" onAction="#onSubmitClicked"/>
+           </HBox>
+
+           <HBox>
+               <padding>
+                   <Insets right="10" top="10" left="10"></Insets>
+               </padding>
+               <Button text="Reset" onAction="#onRemovalButtonClicked"/>
+
+           </HBox>
+       </VBox>
+
+    </left>
+
+
+
+
+    <!--  Informace o hradlu  -->
+    <right>
+        <GridPane>
+            <padding>
+                <Insets right="10"></Insets>
+            </padding>
+
+            <columnConstraints>
+                <ColumnConstraints percentWidth="20"></ColumnConstraints>
+                <ColumnConstraints percentWidth="20"></ColumnConstraints>
+                <ColumnConstraints percentWidth="20"></ColumnConstraints>
+                <ColumnConstraints percentWidth="20"></ColumnConstraints>
+                <ColumnConstraints percentWidth="20"></ColumnConstraints>
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+
+            </rowConstraints>
+
+
+        </GridPane>
+    </right>
+
+
+    <!--  Průběh adaptace  -->
+    <center>
+        <GridPane>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="10"></ColumnConstraints>
+                <ColumnConstraints percentWidth="10"></ColumnConstraints>
+                <ColumnConstraints percentWidth="10"></ColumnConstraints>
+                <ColumnConstraints percentWidth="10"></ColumnConstraints>
+                <ColumnConstraints percentWidth="10"></ColumnConstraints>
+                <ColumnConstraints percentWidth="10"></ColumnConstraints>
+                <ColumnConstraints percentWidth="10"></ColumnConstraints>
+                <ColumnConstraints percentWidth="10"></ColumnConstraints>
+                <ColumnConstraints percentWidth="10"></ColumnConstraints>
+                <ColumnConstraints percentWidth="10"></ColumnConstraints>
+            </columnConstraints>
+
+            <rowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+                <RowConstraints percentHeight="5"></RowConstraints>
+            </rowConstraints>
+
+            <Label style="-fx-font-size: 15px;" text="Průběh adaptace" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="0"></Label>
+            <TextArea fx:id="resultArea" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.columnSpan="8" GridPane.rowSpan="8"></TextArea>
+
+
+            <Text  GridPane.rowIndex="6"
+                   GridPane.columnIndex="1"
+                   GridPane.columnSpan="8"
+                   GridPane.rowSpan="8"
+                   text=""
+                   style="-fx-font-size: 15px;"
+                   fx:id="gateInfo"
+            >
+            </Text>
+
+
+
+
+
+
+        </GridPane>
+    </center>
+
+
+
+    <!-- Footer  -->
+    <bottom>
+        <HBox alignment="TOP_CENTER" spacing="10">
+            <padding>
+                <Insets bottom="10" />
+            </padding>
+            <Label text="Autor: Patrik Duch" />
+        </HBox>
+    </bottom>
+</BorderPane>
